@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The Zone, tienda online de artículos gamer en Chile.">
+    <title>Carrito | The Zone</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+    <!-- Cabecera común a todo el sitio -->
+    <header class="cabecera">
+        <div class="contenedor cabecera-interior">
+            <a class="logo" href="index.html">The<span>Zone</span></a>
+
+            <button class="menu-boton" id="menuBoton" type="button"
+                    aria-label="Abrir el menú" aria-expanded="false">Menú</button>
+
+            <!-- Menú principal de navegación -->
+            <nav class="navegacion" id="navegacion" aria-label="Menú principal">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="productos.html">Productos</a></li>
+                    <li><a href="blogs.html">Blog</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="admin-producto.html">Administración</a></li>
+                </ul>
+            </nav>
+
+            <div class="acciones">
+                <a class="boton boton-secundario" href="login.html">Ingresar</a>
+                <a class="boton" href="carrito.html">Carrito (<span id="contadorCarrito">0</span>)</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="principal">
+        <div class="contenedor">
+
+            <section class="seccion">
+                <h1 class="seccion-titulo">Mi carrito</h1>
+                <p class="seccion-bajada">Revisa los productos antes de confirmar el pedido.</p>
+
+                <div class="aviso aviso-exito" id="avisoPedido" role="status"></div>
+
+                <p class="vacio" id="carritoVacio">
+                    Tu carrito está vacío. <a href="productos.html">Ver el catálogo</a>.
+                </p>
+
+                <table class="tabla" id="tablaCarrito">
+                    <caption class="ayuda">Productos agregados al carrito</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Imagen</th>
+                            <th scope="col">Producto</th>
+                            <th scope="col">Precio</th>
+                            <th scope="col">Cantidad</th>
+                            <th scope="col">Subtotal</th>
+                            <th scope="col">Acción</th>
+                        </tr>
+                    </thead>
+                    <tbody id="cuerpoCarrito"></tbody>
+                </table>
+
+                <div class="carrito-resumen" id="resumenCarrito">
+                    <h3>Resumen del pedido</h3>
+                    <div class="carrito-linea">
+                        <span>Neto</span><span id="carritoNeto">$0</span>
+                    </div>
+                    <div class="carrito-linea">
+                        <span>IVA (19%)</span><span id="carritoIva">$0</span>
+                    </div>
+                    <div class="carrito-linea">
+                        <span>Despacho</span><span id="carritoDespacho">$0</span>
+                    </div>
+                    <div class="carrito-total">
+                        <span>Total</span><span id="carritoTotal">$0</span>
+                    </div>
+                    <button class="boton boton-bloque" type="button" onclick="confirmarPedido()">
+                        Confirmar pedido
+                    </button>
+                    <p></p>
+                    <button class="boton boton-secundario boton-bloque" type="button" onclick="vaciarCarrito()">
+                        Vaciar carrito
+                    </button>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Pie de página con información del negocio -->
+    <footer class="pie">
+        <div class="contenedor">
+            <div class="pie-interior">
+                <section>
+                    <h3>The Zone</h3>
+                    <p>Tienda especializada en artículos gamer. Despachamos a todo Chile
+                       en 3 a 5 días hábiles.</p>
+                </section>
+                <section>
+                    <h3>Navegación</h3>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="productos.html">Productos</a></li>
+                        <li><a href="blogs.html">Blog</a></li>
+                        <li><a href="nosotros.html">Nosotros</a></li>
+                    </ul>
+                </section>
+                <section>
+                    <h3>Tu cuenta</h3>
+                    <ul>
+                        <li><a href="login.html">Iniciar sesión</a></li>
+                        <li><a href="registro.html">Crear cuenta</a></li>
+                        <li><a href="carrito.html">Mi carrito</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </section>
+                <section>
+                    <h3>Contacto</h3>
+                    <ul>
+                        <li>Av. Providencia 1234, Santiago</li>
+                        <li>+56 2 2345 6789</li>
+                        <li><a href="mailto:contacto@thezone.cl">contacto@thezone.cl</a></li>
+                        <li>Lunes a viernes de 9:00 a 19:00</li>
+                    </ul>
+                </section>
+            </div>
+            <p class="pie-legal">The Zone &copy; 2026 - Proyecto académico DSY1104 Desarrollo Fullstack II</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/carrito.js"></script>
+    <script src="assets/js/productos.js"></script>
+</body>
+</html>

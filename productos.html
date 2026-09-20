@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The Zone, tienda online de artículos gamer en Chile.">
+    <title>Productos | The Zone</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+    <!-- Cabecera común a todo el sitio -->
+    <header class="cabecera">
+        <div class="contenedor cabecera-interior">
+            <a class="logo" href="index.html">The<span>Zone</span></a>
+
+            <button class="menu-boton" id="menuBoton" type="button"
+                    aria-label="Abrir el menú" aria-expanded="false">Menú</button>
+
+            <!-- Menú principal de navegación -->
+            <nav class="navegacion" id="navegacion" aria-label="Menú principal">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="productos.html" class="activo">Productos</a></li>
+                    <li><a href="blogs.html">Blog</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="admin-producto.html">Administración</a></li>
+                </ul>
+            </nav>
+
+            <div class="acciones">
+                <a class="boton boton-secundario" href="login.html">Ingresar</a>
+                <a class="boton" href="carrito.html">Carrito (<span id="contadorCarrito">0</span>)</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="principal">
+        <div class="contenedor">
+
+            <section class="seccion">
+                <h1 class="seccion-titulo">Catálogo de productos</h1>
+                <p class="seccion-bajada">
+                    Mostrando <span id="totalResultados">0</span> productos disponibles.
+                </p>
+
+                <div class="aviso aviso-exito" id="avisoCarrito" role="status"></div>
+
+                <!-- Filtros del catálogo -->
+                <div class="filtros">
+                    <div>
+                        <label for="filtroTexto">Buscar producto</label>
+                        <input type="search" id="filtroTexto" name="filtroTexto"
+                               placeholder="Por ejemplo: teclado" autocomplete="off">
+                    </div>
+                    <div>
+                        <label for="filtroCategoria">Categoría</label>
+                        <select id="filtroCategoria" name="filtroCategoria">
+                            <option value="todas">Todas las categorías</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="filtroOrden">Ordenar por</label>
+                        <select id="filtroOrden" name="filtroOrden">
+                            <option value="ninguno">Sin orden</option>
+                            <option value="menor">Precio de menor a mayor</option>
+                            <option value="mayor">Precio de mayor a menor</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="rejilla-productos" id="rejillaCatalogo"></div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Pie de página con información del negocio -->
+    <footer class="pie">
+        <div class="contenedor">
+            <div class="pie-interior">
+                <section>
+                    <h3>The Zone</h3>
+                    <p>Tienda especializada en artículos gamer. Despachamos a todo Chile
+                       en 3 a 5 días hábiles.</p>
+                </section>
+                <section>
+                    <h3>Navegación</h3>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="productos.html">Productos</a></li>
+                        <li><a href="blogs.html">Blog</a></li>
+                        <li><a href="nosotros.html">Nosotros</a></li>
+                    </ul>
+                </section>
+                <section>
+                    <h3>Tu cuenta</h3>
+                    <ul>
+                        <li><a href="login.html">Iniciar sesión</a></li>
+                        <li><a href="registro.html">Crear cuenta</a></li>
+                        <li><a href="carrito.html">Mi carrito</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </section>
+                <section>
+                    <h3>Contacto</h3>
+                    <ul>
+                        <li>Av. Providencia 1234, Santiago</li>
+                        <li>+56 2 2345 6789</li>
+                        <li><a href="mailto:contacto@thezone.cl">contacto@thezone.cl</a></li>
+                        <li>Lunes a viernes de 9:00 a 19:00</li>
+                    </ul>
+                </section>
+            </div>
+            <p class="pie-legal">The Zone &copy; 2026 - Proyecto académico DSY1104 Desarrollo Fullstack II</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/carrito.js"></script>
+    <script src="assets/js/productos.js"></script>
+</body>
+</html>

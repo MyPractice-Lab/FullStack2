@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The Zone, tienda online de artículos gamer en Chile.">
+    <title>Inicio | The Zone</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+    <!-- Cabecera común a todo el sitio -->
+    <header class="cabecera">
+        <div class="contenedor cabecera-interior">
+            <a class="logo" href="index.html">The<span>Zone</span></a>
+
+            <button class="menu-boton" id="menuBoton" type="button"
+                    aria-label="Abrir el menú" aria-expanded="false">Menú</button>
+
+            <!-- Menú principal de navegación -->
+            <nav class="navegacion" id="navegacion" aria-label="Menú principal">
+                <ul>
+                    <li><a href="index.html" class="activo">Inicio</a></li>
+                    <li><a href="productos.html">Productos</a></li>
+                    <li><a href="blogs.html">Blog</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="admin-producto.html">Administración</a></li>
+                </ul>
+            </nav>
+
+            <div class="acciones">
+                <a class="boton boton-secundario" href="login.html">Ingresar</a>
+                <a class="boton" href="carrito.html">Carrito (<span id="contadorCarrito">0</span>)</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Portada de presentacion -->
+    <section class="portada">
+        <div class="contenedor portada-interior">
+            <div>
+                <h1>Arma tu setup en The Zone</h1>
+                <p>Teclados, mouse, monitores y todo lo que necesitas para jugar mejor.
+                   Productos con garantía y despacho a todo Chile.</p>
+                <div class="portada-botones">
+                    <a class="boton" href="productos.html">Ver catálogo</a>
+                    <a class="boton boton-secundario" href="registro.html">Crear cuenta</a>
+                </div>
+            </div>
+            <img src="assets/img/portada.svg" alt="Escritorio con equipamiento gamer">
+        </div>
+    </section>
+
+    <main class="principal">
+        <div class="contenedor">
+
+            <div class="aviso aviso-exito" id="avisoCarrito" role="status"></div>
+
+            <!-- Productos destacados del catálogo -->
+            <section class="seccion">
+                <h2 class="seccion-titulo">Productos destacados</h2>
+                <p class="seccion-bajada">Lo más vendido de este mes en nuestra tienda.</p>
+                <div class="rejilla-productos" id="rejillaDestacados"></div>
+            </section>
+
+            <!-- Video institucional embebido -->
+            <section class="seccion">
+                <h2 class="seccion-titulo">Conoce nuestra tienda</h2>
+                <p class="seccion-bajada">Un recorrido por The Zone y por la forma en que preparamos cada pedido.</p>
+                <div class="video-marco">
+                    <iframe src="https://www.youtube.com/embed/M7lc1UVf-VE"
+                            title="Video de presentacion de The Zone"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; picture-in-picture"
+                            allowfullscreen></iframe>
+                </div>
+            </section>
+
+            <!-- Beneficios de comprar en la tienda -->
+            <section class="seccion">
+                <h2 class="seccion-titulo">Por que comprar en The Zone</h2>
+                <div class="rejilla-blog">
+                    <article class="entrada">
+                        <h3>Garantía real</h3>
+                        <p>Todos nuestros productos tienen entre 6 y 24 meses de garantía
+                           directa con la tienda.</p>
+                    </article>
+                    <article class="entrada">
+                        <h3>Despacho a todo Chile</h3>
+                        <p>Enviamos a las 16 regiones. Despacho gratis en compras
+                           sobre $100.000.</p>
+                    </article>
+                    <article class="entrada">
+                        <h3>Asesoría antes de comprar</h3>
+                        <p>Te ayudamos a elegir el equipo según tu presupuesto y el
+                           tipo de juego que prefieras.</p>
+                    </article>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Pie de página con información del negocio -->
+    <footer class="pie">
+        <div class="contenedor">
+            <div class="pie-interior">
+                <section>
+                    <h3>The Zone</h3>
+                    <p>Tienda especializada en artículos gamer. Despachamos a todo Chile
+                       en 3 a 5 días hábiles.</p>
+                </section>
+                <section>
+                    <h3>Navegación</h3>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="productos.html">Productos</a></li>
+                        <li><a href="blogs.html">Blog</a></li>
+                        <li><a href="nosotros.html">Nosotros</a></li>
+                    </ul>
+                </section>
+                <section>
+                    <h3>Tu cuenta</h3>
+                    <ul>
+                        <li><a href="login.html">Iniciar sesión</a></li>
+                        <li><a href="registro.html">Crear cuenta</a></li>
+                        <li><a href="carrito.html">Mi carrito</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </section>
+                <section>
+                    <h3>Contacto</h3>
+                    <ul>
+                        <li>Av. Providencia 1234, Santiago</li>
+                        <li>+56 2 2345 6789</li>
+                        <li><a href="mailto:contacto@thezone.cl">contacto@thezone.cl</a></li>
+                        <li>Lunes a viernes de 9:00 a 19:00</li>
+                    </ul>
+                </section>
+            </div>
+            <p class="pie-legal">The Zone &copy; 2026 - Proyecto académico DSY1104 Desarrollo Fullstack II</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/carrito.js"></script>
+    <script src="assets/js/productos.js"></script>
+</body>
+</html>
