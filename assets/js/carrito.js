@@ -4,7 +4,7 @@
    mantiene aunque el usuario cierre la página.
    ========================================================================== */
 
-/* Lee el carrito guardado. Devuelve una lista vacia si todavia no existe. */
+/* Lee el carrito guardado. Devuelve una lista vacía si todavía no existe. */
 function obtenerCarrito() {
     var guardado = localStorage.getItem("carritoTheZone");
     if (guardado === null) {
@@ -19,7 +19,7 @@ function guardarCarrito(carrito) {
     actualizarContador();
 }
 
-/* Suma las unidades del carrito y las muestra junto al boton de la cabecera. */
+/* Suma las unidades del carrito y las muestra junto al botón de la cabecera. */
 function actualizarContador() {
     var contador = document.getElementById("contadorCarrito");
     if (contador === null) {
@@ -85,7 +85,7 @@ function cambiarCantidad(id, cantidad) {
     pintarCarrito();
 }
 
-/* Vacia el carrito completo. */
+/* Vacía el carrito completo. */
 function vaciarCarrito() {
     guardarCarrito([]);
     pintarCarrito();
@@ -155,7 +155,7 @@ function pintarCarrito() {
 
     cuerpo.innerHTML = html;
 
-    // El precio de venta ya incluye IVA, por eso se calcula hacia atras.
+    // El precio de venta ya incluye IVA, por eso se calcula hacia atrás.
     var iva = Math.round(neto - (neto / 1.19));
     var despacho = neto > 100000 ? 0 : 4990;
     var total = neto + despacho;
@@ -175,7 +175,7 @@ function confirmarPedido() {
     vaciarCarrito();
 }
 
-/* Abre y cierra el menú en pantallas pequenas. */
+/* Abre y cierra el menú en pantallas pequeñas. */
 function alternarMenu() {
     var navegacion = document.getElementById("navegacion");
     var boton = document.getElementById("menuBoton");

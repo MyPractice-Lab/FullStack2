@@ -10,32 +10,32 @@ var productosBase = [
     {
         id: 1,
         nombre: "Teclado mecánico Zone K80 RGB",
-        categoría: "Teclados",
+        categoria: "Teclados",
         precio: 59990,
         imagen: "assets/img/teclado.jpg",
         marca: "Zone",
         garantía: "12 meses",
-        descripción: "Teclado mecánico de tamaño completo con switches rojos, retroiluminacion RGB por tecla y estructura de aluminio."
+        descripcion: "Teclado mecánico de tamaño completo con switches rojos, retroiluminación RGB por tecla y estructura de aluminio."
     },
     {
         id: 2,
         nombre: "Mouse gamer Zone M5 Pro",
-        categoría: "Mouse",
+        categoria: "Mouse",
         precio: 29990,
         imagen: "assets/img/mouse.jpg",
         marca: "Zone",
         garantía: "12 meses",
-        descripción: "Mouse de 16000 DPI ajustables, seis botones programables y sensor óptico de alta precision."
+        descripcion: "Mouse de 16000 DPI ajustables, seis botones programables y sensor óptico de alta precisión."
     },
     {
         id: 3,
         nombre: "Notebook gamer Zone Raptor 15",
-        categoría: "Notebooks",
+        categoria: "Notebooks",
         precio: 899990,
         imagen: "assets/img/laptop.webp",
         marca: "Zone",
         garantía: "24 meses",
-        descripción: "Notebook de 15 pulgadas con pantalla de 144 Hz, 16 GB de memoria RAM y disco sólido de 512 GB."
+        descripcion: "Notebook de 15 pulgadas con pantalla de 144 Hz, 16 GB de memoria RAM y disco sólido de 512 GB."
     }
 ];
 
@@ -96,7 +96,7 @@ function pintarProductos(contenedor, lista) {
     contenedor.innerHTML = html;
 }
 
-/* Aplica los filtros de categoría y de texto del catalogo. */
+/* Aplica los filtros de categoría y de texto del catálogo. */
 function filtrarCatalogo() {
     var contenedor = document.getElementById("rejillaCatalogo");
     var categoria = document.getElementById("filtroCategoria").value;

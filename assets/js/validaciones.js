@@ -1,7 +1,7 @@
 /* ==========================================================================
-   The Zone - Validacion de formularios
+   The Zone - Validación de formularios
    Revisa los datos antes de enviarlos, marca el campo con problemas,
-   explica el error con un mensaje propio y propone una correccion
+   explica el error con un mensaje propio y propone una corrección
    cuando el error es un error de escritura conocido.
    ========================================================================== */
 
@@ -59,7 +59,7 @@ function correoValido(valor) {
     return patron.test(valor);
 }
 
-/* Si el dominio esta mal escrito, ofrece la correccion como un enlace. */
+/* Si el dominio está mal escrito, ofrece la correccion como un enlace. */
 function revisarSugerenciaCorreo(idCampo) {
     var campo = document.getElementById(idCampo);
     var sugerencia = document.getElementById("sugerencia-" + idCampo);
@@ -83,7 +83,7 @@ function revisarSugerenciaCorreo(idCampo) {
     }
 
     var propuesta = partes[0] + "@" + correccion;
-    sugerencia.innerHTML = 'Quizas quisiste escribir <button type="button">' + propuesta + "</button>";
+    sugerencia.innerHTML = 'Quizás quisiste escribir <button type="button">' + propuesta + "</button>";
     sugerencia.classList.add("visible");
 
     sugerencia.querySelector("button").addEventListener("click", function () {
@@ -121,10 +121,10 @@ function validarContacto(evento) {
     var nombre = document.getElementById("nombre").value.trim();
     if (nombre === "") {
         marcarError("nombre", "El nombre es obligatorio.");
-        válido = false;
+        valido = false;
     } else if (nombre.length < 3) {
         marcarError("nombre", "El nombre debe tener al menos 3 letras. Escribiste " + nombre.length + ".");
-        válido = false;
+        valido = false;
     } else {
         marcarCorrecto("nombre");
     }
@@ -132,10 +132,10 @@ function validarContacto(evento) {
     var correo = document.getElementById("correo").value.trim();
     if (correo === "") {
         marcarError("correo", "El correo es obligatorio para poder responderte.");
-        válido = false;
+        valido = false;
     } else if (correoValido(correo) === false) {
-        marcarError("correo", "El correo no tiene un formato valido. Debe ser parecido a nombre@dominio.cl");
-        válido = false;
+        marcarError("correo", "El correo no tiene un formato válido. Debe ser parecido a nombre@dominio.cl");
+        valido = false;
     } else {
         marcarCorrecto("correo");
     }
@@ -144,7 +144,7 @@ function validarContacto(evento) {
     var asunto = document.getElementById("asunto").value;
     if (asunto === "") {
         marcarError("asunto", "Selecciona el motivo de tu consulta.");
-        válido = false;
+        valido = false;
     } else {
         marcarCorrecto("asunto");
     }
@@ -152,10 +152,10 @@ function validarContacto(evento) {
     var mensaje = document.getElementById("mensaje").value.trim();
     if (mensaje === "") {
         marcarError("mensaje", "Escribe tu consulta antes de enviar.");
-        válido = false;
+        valido = false;
     } else if (mensaje.length < 10) {
-        marcarError("mensaje", "Cuentanos un poco más: faltan " + (10 - mensaje.length) + " caracteres.");
-        válido = false;
+        marcarError("mensaje", "Cuéntanos un poco más: faltan " + (10 - mensaje.length) + " caracteres.");
+        valido = false;
     } else {
         marcarCorrecto("mensaje");
     }
@@ -184,10 +184,10 @@ function validarRegistro(evento) {
     var nombre = document.getElementById("nombreCompleto").value.trim();
     if (nombre === "") {
         marcarError("nombreCompleto", "El nombre completo es obligatorio.");
-        válido = false;
+        valido = false;
     } else if (nombre.indexOf(" ") === -1) {
         marcarError("nombreCompleto", "Escribe nombre y apellido separados por un espacio.");
-        válido = false;
+        valido = false;
     } else {
         marcarCorrecto("nombreCompleto");
     }
@@ -195,10 +195,10 @@ function validarRegistro(evento) {
     var correo = document.getElementById("correoRegistro").value.trim();
     if (correo === "") {
         marcarError("correoRegistro", "El correo es obligatorio.");
-        válido = false;
+        valido = false;
     } else if (correoValido(correo) === false) {
-        marcarError("correoRegistro", "El correo no tiene un formato valido. Debe ser parecido a nombre@dominio.cl");
-        válido = false;
+        marcarError("correoRegistro", "El correo no tiene un formato válido. Debe ser parecido a nombre@dominio.cl");
+        valido = false;
     } else {
         marcarCorrecto("correoRegistro");
     }
@@ -207,16 +207,16 @@ function validarRegistro(evento) {
     var clave = document.getElementById("clave").value;
     if (clave === "") {
         marcarError("clave", "La contraseña es obligatoria.");
-        válido = false;
+        valido = false;
     } else if (clave.length < 8) {
         marcarError("clave", "La contraseña debe tener al menos 8 caracteres. Escribiste " + clave.length + ".");
-        válido = false;
+        valido = false;
     } else if (/[0-9]/.test(clave) === false) {
         marcarError("clave", "La contraseña debe incluir al menos un número.");
-        válido = false;
+        valido = false;
     } else if (/[A-Z]/.test(clave) === false) {
         marcarError("clave", "La contraseña debe incluir al menos una letra mayúscula.");
-        válido = false;
+        valido = false;
     } else {
         marcarCorrecto("clave");
     }
@@ -224,10 +224,10 @@ function validarRegistro(evento) {
     var repetir = document.getElementById("repetirClave").value;
     if (repetir === "") {
         marcarError("repetirClave", "Repite la contraseña para confirmarla.");
-        válido = false;
+        valido = false;
     } else if (repetir !== clave) {
         marcarError("repetirClave", "Las contraseñas no coinciden.");
-        válido = false;
+        valido = false;
     } else {
         marcarCorrecto("repetirClave");
     }
@@ -235,7 +235,7 @@ function validarRegistro(evento) {
     var region = document.getElementById("region").value;
     if (region === "") {
         marcarError("region", "Selecciona tu región para calcular el despacho.");
-        válido = false;
+        valido = false;
     } else {
         marcarCorrecto("region");
     }
@@ -243,7 +243,7 @@ function validarRegistro(evento) {
     var comuna = document.getElementById("comuna").value;
     if (comuna === "") {
         marcarError("comuna", "Selecciona tu comuna.");
-        válido = false;
+        valido = false;
     } else {
         marcarCorrecto("comuna");
     }
@@ -251,7 +251,7 @@ function validarRegistro(evento) {
     var terminos = document.getElementById("terminos");
     if (terminos.checked === false) {
         marcarError("terminos", "Debes aceptar los términos y condiciones para crear la cuenta.");
-        válido = false;
+        valido = false;
     } else {
         marcarCorrecto("terminos");
     }
@@ -276,10 +276,10 @@ function validarLogin(evento) {
     var correo = document.getElementById("correoLogin").value.trim();
     if (correo === "") {
         marcarError("correoLogin", "Ingresa tu correo.");
-        válido = false;
+        valido = false;
     } else if (correoValido(correo) === false) {
-        marcarError("correoLogin", "El correo no tiene un formato valido.");
-        válido = false;
+        marcarError("correoLogin", "El correo no tiene un formato válido.");
+        valido = false;
     } else {
         marcarCorrecto("correoLogin");
     }
@@ -288,7 +288,7 @@ function validarLogin(evento) {
     var clave = document.getElementById("claveLogin").value;
     if (clave === "") {
         marcarError("claveLogin", "Ingresa tu contraseña.");
-        válido = false;
+        valido = false;
     } else {
         marcarCorrecto("claveLogin");
     }
@@ -312,7 +312,7 @@ function validarProducto(evento) {
     var nombre = document.getElementById("nombreProducto").value.trim();
     if (nombre.length < 5) {
         marcarError("nombreProducto", "El nombre del producto debe tener al menos 5 caracteres.");
-        válido = false;
+        valido = false;
     } else {
         marcarCorrecto("nombreProducto");
     }
@@ -320,7 +320,7 @@ function validarProducto(evento) {
     var categoria = document.getElementById("categoriaProducto").value.trim();
     if (categoria === "") {
         marcarError("categoriaProducto", "Indica la categoría del producto.");
-        válido = false;
+        valido = false;
     } else {
         marcarCorrecto("categoriaProducto");
     }
@@ -328,13 +328,13 @@ function validarProducto(evento) {
     var precio = document.getElementById("precioProducto").value;
     if (precio === "") {
         marcarError("precioProducto", "El precio es obligatorio.");
-        válido = false;
+        valido = false;
     } else if (isNaN(precio) === true) {
         marcarError("precioProducto", "El precio debe ser un número, sin puntos ni símbolos.");
-        válido = false;
+        valido = false;
     } else if (Number(precio) <= 0) {
         marcarError("precioProducto", "El precio debe ser mayor que cero.");
-        válido = false;
+        valido = false;
     } else {
         marcarCorrecto("precioProducto");
     }
@@ -343,7 +343,7 @@ function validarProducto(evento) {
     if (descripcion.length < 20) {
         marcarError("descripcionProducto",
             "La descripción debe tener al menos 20 caracteres. Escribiste " + descripcion.length + ".");
-        válido = false;
+        valido = false;
     } else {
         marcarCorrecto("descripcionProducto");
     }
@@ -371,12 +371,12 @@ function guardarProductoNuevo(nombre, categoria, precio, descripcion) {
     lista.push({
         id: mayorId + 1,
         nombre: nombre,
-        categoría: categoria,
+        categoria: categoria,
         precio: precio,
         imagen: "assets/img/teclado.jpg",
         marca: "Zone",
         garantía: "12 meses",
-        descripción: descripción
+        descripcion: descripcion
     });
 
     guardarProductos(lista);
@@ -391,7 +391,7 @@ function eliminarProducto(id) {
         return producto.id !== id;
     });
     guardarProductos(lista);
-    mostrarResumen("avisoProducto", "Producto eliminado del catalogo.", true);
+    mostrarResumen("avisoProducto", "Producto eliminado del catálogo.", true);
     pintarTablaAdmin();
 }
 
@@ -427,7 +427,7 @@ function pintarTablaAdmin() {
 }
 
 /* ==========================================================================
-   Conexion de los formularios de cada página
+   Conexión de los formularios de cada página
    ========================================================================== */
 document.addEventListener("DOMContentLoaded", function () {
     var contacto = document.getElementById("formularioContacto");

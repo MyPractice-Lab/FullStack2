@@ -6,20 +6,20 @@
 /* Variables de color y medidas
    -------------------------------------------------------------------------- */
 :root {
-    --color-fondo: #0b1020;
-    --color-superficie: #151a2e;
-    --color-superficie-alta: #1d2340;
-    --color-borde: #2a3154;
-    --color-texto: #e6e9f5;
-    --color-texto-suave: #9aa3c7;
-    --color-primario: #7c3aed;
-    --color-primario-claro: #a78bfa;
-    --color-secundario: #0ea5e9;
-    --color-exito: #22c55e;
-    --color-error: #f87171;
-    --radio: 12px;
-    --ancho-maximo: 1180px;
-    --sombra: 0 10px 30px rgba(0, 0, 0, 0.35);
+    --color-fondo: #ededed;
+    --color-superficie: #f5f5f5;
+    --color-superficie-alta: #e0e0e0;
+    --color-borde: #b5b5b5;
+    --color-texto: #222222;
+    --color-texto-suave: #555555;
+    --color-primario: #8b1a1a;
+    --color-primario-claro: #a83232;
+    --color-secundario: #666666;
+    --color-exito: #2e6b32;
+    --color-error: #a32020;
+    --radio: 3px;
+    --ancho-maximo: 1100px;
+    --sombra: none;
 }
 
 /* Reinicio basico
@@ -31,7 +31,7 @@
 }
 
 body {
-    font-family: "Segoe UI", Roboto, Arial, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     background-color: var(--color-fondo);
     color: var(--color-texto);
     line-height: 1.6;
@@ -46,16 +46,17 @@ img {
 }
 
 a {
-    color: var(--color-primario-claro);
-    text-decoration: none;
+    color: #333333;
+    text-decoration: underline;
 }
 
 a:hover {
-    text-decoration: underline;
+    color: var(--color-primario);
 }
 
 h1, h2, h3 {
     line-height: 1.25;
+    color: var(--color-primario);
 }
 
 .contenedor {
@@ -70,9 +71,6 @@ h1, h2, h3 {
 .cabecera {
     background-color: var(--color-superficie);
     border-bottom: 1px solid var(--color-borde);
-    position: sticky;
-    top: 0;
-    z-index: 100;
 }
 
 .cabecera-interior {
@@ -93,7 +91,7 @@ h1, h2, h3 {
 }
 
 .logo span {
-    color: var(--color-primario-claro);
+    color: var(--color-primario);
 }
 
 .logo:hover {
@@ -140,9 +138,9 @@ h1, h2, h3 {
    -------------------------------------------------------------------------- */
 .boton {
     display: inline-block;
-    background-color: var(--color-primario);
-    color: #ffffff;
-    border: none;
+    background-color: #dcdcdc;
+    color: #222222;
+    border: 1px solid var(--color-borde);
     border-radius: 8px;
     padding: 10px 18px;
     font-size: 0.95rem;
@@ -153,8 +151,7 @@ h1, h2, h3 {
 }
 
 .boton:hover {
-    background-color: var(--color-primario-claro);
-    color: #101223;
+    background-color: #cccccc;
     text-decoration: none;
 }
 
@@ -166,7 +163,6 @@ h1, h2, h3 {
 
 .boton-secundario:hover {
     background-color: var(--color-superficie-alta);
-    color: var(--color-texto);
 }
 
 .boton-peligro {
@@ -177,7 +173,7 @@ h1, h2, h3 {
 
 .boton-peligro:hover {
     background-color: var(--color-error);
-    color: #101223;
+    color: #ffffff;
 }
 
 .boton-bloque {
@@ -200,7 +196,7 @@ h1, h2, h3 {
 }
 
 .portada h1 {
-    font-size: 2.6rem;
+    font-size: 2rem;
     margin-bottom: 14px;
 }
 
@@ -233,7 +229,7 @@ h1, h2, h3 {
 }
 
 .seccion-titulo {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     margin-bottom: 8px;
 }
 
@@ -257,10 +253,6 @@ h1, h2, h3 {
     overflow: hidden;
     display: flex;
     flex-direction: column;
-}
-
-.tarjeta:hover {
-    border-color: var(--color-primario);
 }
 
 .tarjeta img {
@@ -289,9 +281,9 @@ h1, h2, h3 {
 }
 
 .tarjeta-precio {
-    font-size: 1.25rem;
+    font-size: 1.15rem;
     font-weight: 700;
-    color: var(--color-primario-claro);
+    color: var(--color-texto);
 }
 
 .tarjeta-acciones {
@@ -371,9 +363,9 @@ h1, h2, h3 {
 }
 
 .detalle-precio {
-    font-size: 2rem;
+    font-size: 1.7rem;
     font-weight: 700;
-    color: var(--color-primario-claro);
+    color: var(--color-texto);
     margin: 14px 0;
 }
 
@@ -446,9 +438,9 @@ h1, h2, h3 {
 .carrito-total {
     display: flex;
     justify-content: space-between;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     font-weight: 700;
-    color: var(--color-primario-claro);
+    color: var(--color-texto);
     border-top: 1px solid var(--color-borde);
     padding-top: 12px;
     margin-bottom: 16px;
@@ -457,7 +449,7 @@ h1, h2, h3 {
 .cantidad {
     width: 70px;
     padding: 6px 8px;
-    background-color: var(--color-fondo);
+    background-color: #ffffff;
     border: 1px solid var(--color-borde);
     border-radius: 6px;
     color: var(--color-texto);
@@ -498,8 +490,8 @@ h1, h2, h3 {
 .campo select,
 .campo textarea {
     width: 100%;
-    padding: 11px 12px;
-    background-color: var(--color-fondo);
+    padding: 9px 10px;
+    background-color: #ffffff;
     border: 1px solid var(--color-borde);
     border-radius: 8px;
     color: var(--color-texto);
@@ -599,13 +591,13 @@ h1, h2, h3 {
 }
 
 .aviso-exito {
-    background-color: rgba(34, 197, 94, 0.12);
+    background-color: #e4efe4;
     border: 1px solid var(--color-exito);
     color: var(--color-exito);
 }
 
 .aviso-error {
-    background-color: rgba(248, 113, 113, 0.12);
+    background-color: #f2e2e2;
     border: 1px solid var(--color-error);
     color: var(--color-error);
 }
