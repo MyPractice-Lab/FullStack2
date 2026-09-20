@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The Zone, tienda online de artículos gamer en Chile.">
+    <title>Nosotros | The Zone</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+    <!-- Cabecera común a todo el sitio -->
+    <header class="cabecera">
+        <div class="contenedor cabecera-interior">
+            <a class="logo" href="index.html">The<span>Zone</span></a>
+
+            <button class="menu-boton" id="menuBoton" type="button"
+                    aria-label="Abrir el menú" aria-expanded="false">Menú</button>
+
+            <!-- Menú principal de navegación -->
+            <nav class="navegacion" id="navegacion" aria-label="Menú principal">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="productos.html">Productos</a></li>
+                    <li><a href="blogs.html">Blog</a></li>
+                    <li><a href="nosotros.html" class="activo">Nosotros</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="admin-producto.html">Administración</a></li>
+                </ul>
+            </nav>
+
+            <div class="acciones">
+                <a class="boton boton-secundario" href="login.html">Ingresar</a>
+                <a class="boton" href="carrito.html">Carrito (<span id="contadorCarrito">0</span>)</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="principal">
+        <div class="contenedor">
+
+            <section class="seccion">
+                <h1 class="seccion-titulo">Sobre The Zone</h1>
+                <p class="seccion-bajada">Una tienda nacida entre jugadores, para jugadores.</p>
+
+                <div class="dos-columnas">
+                    <article class="texto">
+                        <h2>Nuestra historia</h2>
+                        <p>The Zone nacio en 2023 como un emprendimiento de tres estudiantes que
+                           vendian periféricos a sus compañeros de universidad. Los pedidos se
+                           tomaban por WhatsApp y por correo, y el registro se llevaba en una
+                           planilla de cálculo.</p>
+                        <p>Al crecer la cantidad de clientes, ese sistema dejo de funcionar: se
+                           perdian pedidos y era imposible hacer seguimiento. Por eso decidimos
+                           construir una tienda en línea que centralizara todo en un solo lugar.</p>
+
+                        <h2>Que nos diferencia</h2>
+                        <ul>
+                            <li>Probamos cada producto antes de agregarlo al catálogo.</li>
+                            <li>Damos asesoría según el presupuesto de cada cliente.</li>
+                            <li>Respondemos las consultas dentro de 24 horas hábiles.</li>
+                            <li>Trabajamos con garantía directa de tienda.</li>
+                        </ul>
+                    </article>
+
+                    <div>
+                        <div class="panel">
+                            <h3>La tienda en números</h3>
+                            <table class="detalle-ficha">
+                                <tr><th>Año de creación</th><td>2023</td></tr>
+                                <tr><th>Clientes atendidos</th><td>Más de 1.200</td></tr>
+                                <tr><th>Regiones con despacho</th><td>16</td></tr>
+                                <tr><th>Categorías</th><td>3</td></tr>
+                            </table>
+                        </div>
+                        <p></p>
+                        <div class="panel">
+                            <h3>Enlaces de interés</h3>
+                            <ul>
+                                <li><a href="https://developer.mozilla.org" target="_blank"
+                                       rel="noopener">MDN Web Docs</a></li>
+                                <li><a href="https://www.sernac.cl" target="_blank"
+                                       rel="noopener">SERNAC - Derechos del consumidor</a></li>
+                                <li><a href="https://www.chileatiende.gob.cl" target="_blank"
+                                       rel="noopener">ChileAtiende</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Pie de página con información del negocio -->
+    <footer class="pie">
+        <div class="contenedor">
+            <div class="pie-interior">
+                <section>
+                    <h3>The Zone</h3>
+                    <p>Tienda especializada en artículos gamer. Despachamos a todo Chile
+                       en 3 a 5 días hábiles.</p>
+                </section>
+                <section>
+                    <h3>Navegación</h3>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="productos.html">Productos</a></li>
+                        <li><a href="blogs.html">Blog</a></li>
+                        <li><a href="nosotros.html">Nosotros</a></li>
+                    </ul>
+                </section>
+                <section>
+                    <h3>Tu cuenta</h3>
+                    <ul>
+                        <li><a href="login.html">Iniciar sesión</a></li>
+                        <li><a href="registro.html">Crear cuenta</a></li>
+                        <li><a href="carrito.html">Mi carrito</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </section>
+                <section>
+                    <h3>Contacto</h3>
+                    <ul>
+                        <li>Av. Providencia 1234, Santiago</li>
+                        <li>+56 2 2345 6789</li>
+                        <li><a href="mailto:contacto@thezone.cl">contacto@thezone.cl</a></li>
+                        <li>Lunes a viernes de 9:00 a 19:00</li>
+                    </ul>
+                </section>
+            </div>
+            <p class="pie-legal">The Zone &copy; 2026 - Proyecto académico DSY1104 Desarrollo Fullstack II</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/carrito.js"></script>
+    <script src="assets/js/productos.js"></script>
+</body>
+</html>

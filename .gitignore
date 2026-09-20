@@ -1,0 +1,20 @@
+# Archivos del sistema operativo
+Thumbs.db
+desktop.ini
+.DS_Store
+*:Zone.Identifier
+
+# Configuracion del editor
+.vscode/
+.idea/
+
+# Documentos y comprimidos que no forman parte del sitio
+*.docx
+*.pdf
+*.rar
+*.zip
+
+# Archivos temporales
+*.tmp
+*.log
+*~

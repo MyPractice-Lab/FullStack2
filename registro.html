@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The Zone, tienda online de artículos gamer en Chile.">
+    <title>Crear cuenta | The Zone</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+    <!-- Cabecera común a todo el sitio -->
+    <header class="cabecera">
+        <div class="contenedor cabecera-interior">
+            <a class="logo" href="index.html">The<span>Zone</span></a>
+
+            <button class="menu-boton" id="menuBoton" type="button"
+                    aria-label="Abrir el menú" aria-expanded="false">Menú</button>
+
+            <!-- Menú principal de navegación -->
+            <nav class="navegacion" id="navegacion" aria-label="Menú principal">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="productos.html">Productos</a></li>
+                    <li><a href="blogs.html">Blog</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="admin-producto.html">Administración</a></li>
+                </ul>
+            </nav>
+
+            <div class="acciones">
+                <a class="boton boton-secundario" href="login.html">Ingresar</a>
+                <a class="boton" href="carrito.html">Carrito (<span id="contadorCarrito">0</span>)</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="principal">
+        <div class="contenedor">
+
+            <section class="seccion formulario-estrecho">
+                <h1 class="seccion-titulo">Crear cuenta</h1>
+                <p class="seccion-bajada">Registrate para comprar y seguir tus pedidos.</p>
+
+                <form class="formulario" id="formularioRegistro" novalidate>
+                    <div class="aviso" id="avisoRegistro" role="alert"></div>
+
+                    <div class="campo">
+                        <label for="nombreCompleto">Nombre completo</label>
+                        <input type="text" id="nombreCompleto" name="nombreCompleto"
+                               autocomplete="name" placeholder="Nombre y apellido">
+                        <small class="ayuda">Escribe tu nombre y tu apellido.</small>
+                        <small class="error" id="error-nombreCompleto"></small>
+                    </div>
+
+                    <div class="campo">
+                        <label for="correoRegistro">Correo electrónico</label>
+                        <input type="email" id="correoRegistro" name="correoRegistro"
+                               autocomplete="email" placeholder="nombre@dominio.cl">
+                        <small class="ayuda">Te enviaremos ahí la confirmacion de tus pedidos.</small>
+                        <small class="sugerencia" id="sugerencia-correoRegistro"></small>
+                        <small class="error" id="error-correoRegistro"></small>
+                    </div>
+
+                    <div class="campo">
+                        <label for="clave">Contraseña</label>
+                        <input type="password" id="clave" name="clave" autocomplete="new-password">
+                        <small class="ayuda">Mínimo 8 caracteres, con una mayúscula y un número.</small>
+                        <small class="error" id="error-clave"></small>
+                    </div>
+
+                    <div class="campo">
+                        <label for="repetirClave">Repetir contraseña</label>
+                        <input type="password" id="repetirClave" name="repetirClave"
+                               autocomplete="new-password">
+                        <small class="error" id="error-repetirClave"></small>
+                    </div>
+
+                    <div class="campo">
+                        <label for="region">Región</label>
+                        <select id="region" name="region">
+                            <option value="">Selecciona una región</option>
+                        </select>
+                        <small class="error" id="error-region"></small>
+                    </div>
+
+                    <div class="campo">
+                        <label for="comuna">Comuna</label>
+                        <select id="comuna" name="comuna">
+                            <option value="">Selecciona una comuna</option>
+                        </select>
+                        <small class="ayuda">Primero elige la región para ver las comunas.</small>
+                        <small class="error" id="error-comuna"></small>
+                    </div>
+
+                    <div class="campo">
+                        <div class="campo-opcion">
+                            <input type="checkbox" id="terminos" name="terminos">
+                            <label for="terminos">Acepto los términos y condiciones de la tienda</label>
+                        </div>
+                        <small class="error" id="error-terminos"></small>
+                    </div>
+
+                    <button class="boton boton-bloque" type="submit">Crear cuenta</button>
+                    <p class="ayuda">Ya tienes cuenta:
+                       <a href="login.html">inicia sesión</a>.</p>
+                </form>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Pie de página con información del negocio -->
+    <footer class="pie">
+        <div class="contenedor">
+            <div class="pie-interior">
+                <section>
+                    <h3>The Zone</h3>
+                    <p>Tienda especializada en artículos gamer. Despachamos a todo Chile
+                       en 3 a 5 días hábiles.</p>
+                </section>
+                <section>
+                    <h3>Navegación</h3>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="productos.html">Productos</a></li>
+                        <li><a href="blogs.html">Blog</a></li>
+                        <li><a href="nosotros.html">Nosotros</a></li>
+                    </ul>
+                </section>
+                <section>
+                    <h3>Tu cuenta</h3>
+                    <ul>
+                        <li><a href="login.html">Iniciar sesión</a></li>
+                        <li><a href="registro.html">Crear cuenta</a></li>
+                        <li><a href="carrito.html">Mi carrito</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </section>
+                <section>
+                    <h3>Contacto</h3>
+                    <ul>
+                        <li>Av. Providencia 1234, Santiago</li>
+                        <li>+56 2 2345 6789</li>
+                        <li><a href="mailto:contacto@thezone.cl">contacto@thezone.cl</a></li>
+                        <li>Lunes a viernes de 9:00 a 19:00</li>
+                    </ul>
+                </section>
+            </div>
+            <p class="pie-legal">The Zone &copy; 2026 - Proyecto académico DSY1104 Desarrollo Fullstack II</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/carrito.js"></script>
+    <script src="assets/js/productos.js"></script>
+    <script src="assets/js/regiones.js"></script>
+    <script src="assets/js/validaciones.js"></script>
+</body>
+</html>
