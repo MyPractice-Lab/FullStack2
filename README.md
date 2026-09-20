@@ -76,8 +76,6 @@ documento *DSY1104 Evaluación Parcial 1 - Anexo 4 ERS - Tienda Online.docx*.
 
 ## Equipo
 
-| Integrante | Rol |
-|---|---|
-| | |
-| | |
-| | |
+- Maximiliano Provoste
+- Patricio Ormazabal
+- Basthian Vernal
