@@ -1,0 +1,15 @@
+# Normaliza los finales de linea para todo el equipo.
+# Git guarda los archivos de texto con LF y los entrega segun el sistema operativo.
+* text=auto
+
+# Archivos binarios: Git no debe tocarlos.
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.webp binary
+*.gif binary
+*.ico binary
+*.pdf binary
+*.docx binary
+*.zip binary
+*.rar binary
