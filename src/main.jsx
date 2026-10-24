@@ -9,7 +9,7 @@ import { ProveedorSesion } from './contexto/SesionContexto.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename="/FullStack2">
       <ProveedorSesion>
         <ProveedorCarrito>
           <App />
