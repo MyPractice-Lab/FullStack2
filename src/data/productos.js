@@ -30,7 +30,7 @@ export function crearProducto(datos) {
     stock: Number(datos.stock),
     marca: datos.marca,
     garantia: datos.garantia,
-    imagen: datos.imagen || '/assets/img/portada.jpg',
+    imagen: datos.imagen || `${import.meta.env.BASE_URL}assets/img/portada.jpg`,
     descripcion: datos.descripcion,
   }
 
