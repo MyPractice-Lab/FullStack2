@@ -52,7 +52,7 @@ function Home() {
           </Col>
           <Col md={5}>
             <img
-              src="/assets/img/portada.jpg"
+              src={`${import.meta.env.BASE_URL}assets/img/portada.jpg`}
               alt="Equipo gamer con un notebook de la tienda"
               className="w-100"
             />
@@ -86,7 +86,7 @@ function Home() {
           Periféricos a un precio criminal para un juego criminal
         </Titulo>
         <video className="zone-video" controls preload="metadata">
-          <source src="/assets/video/promo.mp4" type="video/mp4" />
+          <source src={`${import.meta.env.BASE_URL}assets/video/promo.mp4`} type="video/mp4" />
           Tu navegador no admite la reproducción de video.
         </video>
       </section>
