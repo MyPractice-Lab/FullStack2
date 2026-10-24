@@ -4,28 +4,28 @@ export const categoriasSemilla = [
     slug: 'teclados',
     nombre: 'Teclados',
     descripcion: 'Mecánicos, de membrana y compactos para cada tipo de escritorio.',
-    imagen: '/assets/img/teclado.jpg',
+    imagen: `${import.meta.env.BASE_URL}assets/img/teclado.jpg`,
   },
   {
     id: 2,
     slug: 'mouse',
     nombre: 'Mouse',
     descripcion: 'Sensores de alta precisión, con cable e inalámbricos.',
-    imagen: '/assets/img/mouse.jpg',
+    imagen: `${import.meta.env.BASE_URL}assets/img/mouse.jpg`,
   },
   {
     id: 3,
     slug: 'notebooks',
     nombre: 'Notebooks',
     descripcion: 'Equipos portátiles con tarjeta dedicada y pantallas de alta tasa de refresco.',
-    imagen: '/assets/img/laptop.webp',
+    imagen: `${import.meta.env.BASE_URL}assets/img/laptop.webp`,
   },
   {
     id: 4,
     slug: 'accesorios',
     nombre: 'Accesorios',
     descripcion: 'Mousepads, audífonos y todo lo que completa el setup.',
-    imagen: '/assets/img/portada.jpg',
+    imagen: `${import.meta.env.BASE_URL}assets/img/portada.jpg`,
   },
 ]
 
@@ -39,7 +39,7 @@ export const productosSemilla = [
     stock: 12,
     marca: 'Zone',
     garantia: '12 meses',
-    imagen: '/assets/img/teclado.jpg',
+    imagen: `${import.meta.env.BASE_URL}assets/img/teclado.jpg`,
     descripcion:
       'Teclado mecánico de tamaño completo con switches rojos, retroiluminación RGB por tecla y estructura de aluminio.',
   },
@@ -52,7 +52,7 @@ export const productosSemilla = [
     stock: 3,
     marca: 'Zone',
     garantia: '12 meses',
-    imagen: '/assets/img/teclado.jpg',
+    imagen: `${import.meta.env.BASE_URL}assets/img/teclado.jpg`,
     descripcion:
       'Formato sin teclado numérico, ideal para escritorios pequeños y para jugadores que mueven mucho el mouse.',
   },
@@ -65,7 +65,7 @@ export const productosSemilla = [
     stock: 20,
     marca: 'Zone',
     garantia: '12 meses',
-    imagen: '/assets/img/mouse.jpg',
+    imagen: `${import.meta.env.BASE_URL}assets/img/mouse.jpg`,
     descripcion:
       'Mouse de 16000 DPI ajustables, seis botones programables y sensor óptico de alta precisión.',
   },
@@ -78,7 +78,7 @@ export const productosSemilla = [
     stock: 2,
     marca: 'Zone',
     garantia: '12 meses',
-    imagen: '/assets/img/mouse.jpg',
+    imagen: `${import.meta.env.BASE_URL}assets/img/mouse.jpg`,
     descripcion:
       'Conexión de 2.4 GHz con receptor USB, 70 horas de autonomía y peso de 68 gramos.',
   },
@@ -91,7 +91,7 @@ export const productosSemilla = [
     stock: 5,
     marca: 'Zone',
     garantia: '24 meses',
-    imagen: '/assets/img/laptop.webp',
+    imagen: `${import.meta.env.BASE_URL}assets/img/laptop.webp`,
     descripcion:
       'Notebook de 15 pulgadas con pantalla de 144 Hz, 16 GB de memoria RAM y disco sólido de 512 GB.',
   },
@@ -104,7 +104,7 @@ export const productosSemilla = [
     stock: 1,
     marca: 'Zone',
     garantia: '24 meses',
-    imagen: '/assets/img/laptop.webp',
+    imagen: `${import.meta.env.BASE_URL}assets/img/laptop.webp`,
     descripcion:
       'Pantalla de 17 pulgadas a 165 Hz, 32 GB de memoria RAM y refrigeración por cámara de vapor.',
   },
@@ -117,7 +117,7 @@ export const productosSemilla = [
     stock: 30,
     marca: 'Zone',
     garantia: '6 meses',
-    imagen: '/assets/img/portada.jpg',
+    imagen: `${import.meta.env.BASE_URL}assets/img/portada.jpg`,
     descripcion:
       'Superficie de 900 x 400 mm con base antideslizante y bordes cosidos que evitan el desgaste.',
   },
@@ -130,7 +130,7 @@ export const productosSemilla = [
     stock: 8,
     marca: 'Zone',
     garantia: '12 meses',
-    imagen: '/assets/img/portada.jpg',
+    imagen: `${import.meta.env.BASE_URL}assets/img/portada.jpg`,
     descripcion:
       'Sonido envolvente 7.1 por software, micrófono retráctil con cancelación de ruido y almohadillas de espuma viscoelástica.',
   },
