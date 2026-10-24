@@ -6,7 +6,7 @@ import Etiqueta from '../atomos/Etiqueta'
 import ImagenProducto from '../atomos/ImagenProducto'
 import Precio from '../atomos/Precio'
 
-function TarjetaProducto({ producto, onAgregar }) {
+function TarjetaProducto({ producto, onAgregar, nombreCategoria }) {
   const enOferta = tieneOferta(producto)
   const sinStock = producto.stock === 0
 
@@ -18,7 +18,7 @@ function TarjetaProducto({ producto, onAgregar }) {
 
       <Card.Body className="d-flex flex-column">
         <div className="mb-2 d-flex gap-2">
-          <Etiqueta>{producto.categoria}</Etiqueta>
+          <Etiqueta>{nombreCategoria ?? producto.categoria}</Etiqueta>
           {enOferta && <Etiqueta tono="oferta">-{porcentajeDescuento(producto)}%</Etiqueta>}
           {sinStock && <Etiqueta tono="aviso">Sin stock</Etiqueta>}
         </div>
