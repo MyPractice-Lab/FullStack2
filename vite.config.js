@@ -5,6 +5,25 @@ import { defineConfig } from 'vite'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
+  optimizeDeps: {
+    include: [
+      'react-router-dom',
+      'react-bootstrap/Alert',
+      'react-bootstrap/Badge',
+      'react-bootstrap/Button',
+      'react-bootstrap/Card',
+      'react-bootstrap/Col',
+      'react-bootstrap/Container',
+      'react-bootstrap/Form',
+      'react-bootstrap/InputGroup',
+      'react-bootstrap/ListGroup',
+      'react-bootstrap/Nav',
+      'react-bootstrap/NavDropdown',
+      'react-bootstrap/Navbar',
+      'react-bootstrap/Row',
+      'react-bootstrap/Table',
+    ],
+  },
   test: {
     projects: [
       {
