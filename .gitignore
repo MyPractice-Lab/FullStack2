@@ -18,3 +18,8 @@ desktop.ini
 *.tmp
 *.log
 *~
+
+# Dependencias y compilado
+node_modules/
+dist/
+.vitest/
