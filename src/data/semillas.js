@@ -25,7 +25,7 @@ export const categoriasSemilla = [
     slug: 'accesorios',
     nombre: 'Accesorios',
     descripcion: 'Mousepads, audífonos y todo lo que completa el setup.',
-    imagen: `${import.meta.env.BASE_URL}assets/img/portada.jpg`,
+    imagen: `${import.meta.env.BASE_URL}assets/img/mousepad.webp`,
   },
 ]
 
@@ -117,7 +117,7 @@ export const productosSemilla = [
     stock: 30,
     marca: 'Zone',
     garantia: '6 meses',
-    imagen: `${import.meta.env.BASE_URL}assets/img/portada.jpg`,
+    imagen: `${import.meta.env.BASE_URL}assets/img/mousepad.webp`,
     descripcion:
       'Superficie de 900 x 400 mm con base antideslizante y bordes cosidos que evitan el desgaste.',
   },
@@ -130,7 +130,7 @@ export const productosSemilla = [
     stock: 8,
     marca: 'Zone',
     garantia: '12 meses',
-    imagen: `${import.meta.env.BASE_URL}assets/img/portada.jpg`,
+    imagen: `${import.meta.env.BASE_URL}assets/img/audifonos.webp`,
     descripcion:
       'Sonido envolvente 7.1 por software, micrófono retráctil con cancelación de ruido y almohadillas de espuma viscoelástica.',
   },
