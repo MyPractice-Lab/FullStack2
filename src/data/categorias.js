@@ -39,7 +39,7 @@ export function crearCategoria(datos) {
     slug: crearSlug(datos.nombre),
     nombre: datos.nombre,
     descripcion: datos.descripcion,
-    imagen: datos.imagen || '/assets/img/portada.jpg',
+    imagen: datos.imagen || `${import.meta.env.BASE_URL}assets/img/portada.jpg`,
   }
 
   guardarCategorias([...lista, nueva])
